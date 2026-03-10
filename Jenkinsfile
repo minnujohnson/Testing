@@ -7,7 +7,7 @@ pipeline {
                 steps {
                     git branch: 'main',
                         url: 'https://github.com/minnujohnson/Testing.git',
-                        credentialsId: 'github-robot'
+                        credentialsId: 'minnujohn'
                     }
                 }
 
