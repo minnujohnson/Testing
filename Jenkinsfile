@@ -4,10 +4,12 @@ pipeline {
     stages {
 
         stage('Checkout') {
-            steps {
-                echo "Code already checked out from Bitbucket"
-            }
-        }
+                steps {
+                    git branch: 'main',
+                        url: 'https://github.com/owner/repository.git',
+                        credentialsId: 'github-robot'
+                    }
+                }
 
         stage('Run Tests') {
             steps {
