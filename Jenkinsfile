@@ -6,7 +6,7 @@ pipeline {
         stage('Checkout') {
                 steps {
                     git branch: 'main',
-                        url: 'https://github.com/owner/repository.git',
+                        url: 'https://github.com/minnujohnson/Testing.git',
                         credentialsId: 'github-robot'
                     }
                 }
