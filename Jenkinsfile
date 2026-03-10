@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                echo "Code already checked out from Bitbucket"
+            }
+        }
+
+        stage('Run Tests') {
+            steps {
+                echo "Running test cases"
+            }
+        }
+
+    }
+
+    post {
+        success {
+            echo "Pipeline executed successfully"
+        }
+        failure {
+            echo "Pipeline failed"
+        }
+    }
+}
